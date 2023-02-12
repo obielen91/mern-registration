@@ -1,0 +1,34 @@
+<div class="container">
+  
+  <h2>Registration</h2>
+
+  <form action="/registration" method="POST">
+
+    <div class="mb-3">
+      <label for="fullname" class="form-label">Full name:</label>
+      <input type="text" class="form-control" id="fullname" name="fullname">
+    </div>
+
+    <div class="mb-3">
+      <label for="event">Event:</label>
+      <select id="event" name="event" class="form-select" aria-label="Default select example">
+        <option value="Course Full Dtack Developer">Course Full Dtack Developer</option>
+        <option value="Course Front End Developer">Course Front End Developer</option>
+        <option value="Course Back End Developer">Course Back End Developer</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="city">City:</label>
+      <select id="city" name="city" class="form-select" aria-label="Default select example">
+        <option value="Online">Online</option>
+        <option value="Warszawa">Warszawa</option>
+        <option value="Kraków">Kraków</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign up for the course</button>
+
+  </form>
+
+</div>
