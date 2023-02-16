@@ -1,16 +1,16 @@
 <div class="container">
-  
+
   <h2>Registration</h2>
 
   <form action="/registration" method="POST">
 
     <div class="mb-3">
-      <label for="fullname" class="form-label">Full name:</label>
+      <label for="fullname" class="form-label">Full name</label>
       <input type="text" class="form-control" id="fullname" name="fullname">
     </div>
 
     <div class="mb-3">
-      <label for="event">Event:</label>
+      <label for="event">Event</label>
       <select id="event" name="event" class="form-select" aria-label="Default select example">
         <option value="Course Full Dtack Developer">Course Full Dtack Developer</option>
         <option value="Course Front End Developer">Course Front End Developer</option>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="city">City:</label>
+      <label for="city">City</label>
       <select id="city" name="city" class="form-select" aria-label="Default select example">
         <option value="Online">Online</option>
         <option value="Warszawa">Warszawa</option>
@@ -30,5 +30,35 @@
     <button type="submit" class="btn btn-primary">Sign up for the course</button>
 
   </form>
+
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Full name</th>
+        <th scope="col">Event</th>
+        <th scope="col">City</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each events}}
+      <tr>
+        <td>{{fullname}}</td>
+        <td>{{event}}</td>
+        <td>{{city}}</td>
+        <td><a href="/registration/delete/{{_id}}" class="btn btn-danger">Delete</a></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
 
 </div>

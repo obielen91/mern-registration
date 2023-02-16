@@ -16,17 +16,15 @@ app.engine('hbs', hbs.engine({extname: '.hbs'}));
 app.set('view engine', 'hbs');
 
 
-
-
 // POD TAKIM ADRESEM BĘDZIEMY CHCIELI TO WYŚWIETLAĆ
 
-app.get('/registration', (req, res) => {
-    res.render('registrationViews/registration');
-});
-
+// app.get('/registration', (req, res) => {
+//     res.render('registrationViews/registration');
+// });
 
 app.post('/registration', eventController.create);
-
+app.get('/registration', eventController.index);
+app.get('/registration/delete/:id', eventController.delete);
 
 app.listen(8010, function() {
     console.log('Serwer Node.js działa');
