@@ -12,6 +12,7 @@
     <div class="mb-3">
       <label for="event">Event</label>
       <select id="event" name="event" class="form-select" aria-label="Default select example">
+        <option value="">Choose...</option>
         <option value="Course Full Dtack Developer">Course Full Dtack Developer</option>
         <option value="Course Front End Developer">Course Front End Developer</option>
         <option value="Course Back End Developer">Course Back End Developer</option>
@@ -21,6 +22,7 @@
     <div class="mb-3">
       <label for="city">City</label>
       <select id="city" name="city" class="form-select" aria-label="Default select example">
+        <option value="">Choose...</option>
         <option value="Online">Online</option>
         <option value="Warszawa">Warszawa</option>
         <option value="Kraków">Kraków</option>
@@ -55,7 +57,8 @@
         <td>{{fullname}}</td>
         <td>{{event}}</td>
         <td>{{city}}</td>
-        <td><a href="/registration/delete/{{_id}}" class="btn btn-danger">Delete</a></td>
+        <td><a href="/registration/edit/{{_id}}" class="btn btn-warning">Edit</a>
+        <a href="/registration/delete/{{_id}}" class="btn btn-danger">Delete</a></td>
       </tr>
       {{/each}}
     </tbody>
